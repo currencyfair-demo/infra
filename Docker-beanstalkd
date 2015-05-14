@@ -1,0 +1,7 @@
+FROM debian:jessie
+MAINTAINER Robert George <robert@poovelil.org>
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y beanstalkd
+
+EXPOSE 11300
+CMD ["/usr/bin/beanstalkd"]
